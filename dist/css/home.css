@@ -81,10 +81,17 @@ font-weight: 400;
   font-family: "Lato";
   font-size: 3em;
   font-weight: 900;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  opacity: 0;
 }
 .textos .mensaje{
   font-size: 1.2em;
   margin: 15px 0px;
+  opacity: 0;
+}
+.textos .botones{
+  opacity: 0;
 }
 .textos ul{
   list-style-image: url(../../vectores/check-ico.svg);
@@ -101,6 +108,30 @@ font-weight: 400;
 }
 .textos li a:hover{
   color: #FD4101;
+}
+@-webkit-keyframes gracias{
+  0%{
+-webkit-transform: translateX(100px);
+        transform: translateX(100px);
+opacity: 0;
+  }
+  100%{
+-webkit-transform: translateX(0px);
+        transform: translateX(0px);
+opacity: 1;
+  }
+}
+@keyframes gracias{
+  0%{
+-webkit-transform: translateX(100px);
+        transform: translateX(100px);
+opacity: 0;
+  }
+  100%{
+-webkit-transform: translateX(0px);
+        transform: translateX(0px);
+opacity: 1;
+  }
 }
 .mascara {
     height: 600px;

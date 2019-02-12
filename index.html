@@ -8,12 +8,12 @@
   <link rel="stylesheet" href="dist/css/home.css">
 </head>
 <body>
-<div class="textos">
+<div class="textos" >
   <div class="contenedorTextos">
-  <div class="titulo">GRACIAS POR ESCRIBIRNOS</div>
-<div class="mensaje">¡Excelente! Tu mensaje ha sido enviado con éxito. Nos comunicaremos contigo en breve. Mientras tanto te invitamos a que nos conozcas mas a fondo.</div>
-<div class="botones">
-  <ul>
+  <div class="titulo" id="texto">GRACIAS POR ESCRIBIRNOS</div>
+<div class="mensaje" id="texto2">¡Excelente! Tu mensaje ha sido enviado con éxito. Nos comunicaremos contigo en breve. Mientras tanto te invitamos a que nos conozcas mas a fondo.</div>
+<div class="botones" id="texto3">
+  <ul >
     <li> <a href="https://www.mediummultimedia.com/opiniones-mediummultimedia-2/">Opiniones de nuestros clientes.</a></li>
     <li><a href="https://www.mediummultimedia.com/casos-de-exito/">Trabajos que hemos hecho.</a></li>
     <li><a href="https://www.mediummultimedia.com/conocenos/">Conoce un poco más de nosotros.</a></li>
@@ -77,7 +77,7 @@
 <!-- fin movil -->
 <!-- cuadrados -->
 <div class="cuadrados">
-<div class="cuadrado1"></div>
+<div class="cuadrado1" id="mostrarMensaje"></div>
 <div class="cuadrado2"></div>
 <div class="cuadrado3"></div>
 <div class="cuadrado4"></div>
@@ -129,5 +129,28 @@
 </div>
 
   </div>
+
+  <script>
+  const $mensaje = document.getElementById("mostrarMensaje");
+  const $textos = document.getElementById("texto")
+  const $textos2 = document.getElementById("texto2")
+  const $textos3 = document.getElementById("texto3")
+  $mensaje.addEventListener("animationend",(event) =>{
+    console.log(event);
+    $textos.style.animationName= "gracias";
+    $textos.style.animationDuration= "2s";
+    $textos.style.animationFillMode= "forwards";
+
+    $textos2.style.animationName= "gracias";
+    $textos2.style.animationDuration= "2s";
+    $textos2.style.animationFillMode= "forwards";
+    $textos2.style.animationDelay= "0.5s";
+
+    $textos3.style.animationName= "gracias";
+    $textos3.style.animationDuration= "2s";
+    $textos3.style.animationFillMode= "forwards";
+    $textos3.style.animationDelay= "1s";
+  });
+  </script>
 </body>
 </html>
